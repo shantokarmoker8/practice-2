@@ -1,5 +1,5 @@
 import Link from "../Link/Link";
-
+import { CiMenuBurger } from "react-icons/ci";
 const NavBar = () => {
   const routes = [
     { path: "/", name: "Home", id: 1 },
@@ -11,6 +11,7 @@ const NavBar = () => {
 
   return (
     <nav>
+      <CiMenuBurger className="text-3xl md:hidden"></CiMenuBurger>
       <ul className="md:flex gap-5">
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
